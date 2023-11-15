@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { InfoPaginaService } from 'src/app/services/info-pagina.service';
 
 @Component({
   selector: 'app-footer',
@@ -10,5 +11,9 @@ export class FooterComponent {
   public day: number = new Date().getUTCDay();
   public month: number = new Date().getUTCMonth();
   public anio: number = new Date().getUTCFullYear();
+
+  constructor ( public _servicio: InfoPaginaService ) {
+
+  }
 
 }
